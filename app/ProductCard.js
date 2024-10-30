@@ -1,16 +1,27 @@
 "use client"
 import React from 'react'
 import {useRouter} from 'next/navigation'
+import useCart from './(store)/store'
 
 export default function ProductCard(props) {
   const { product } = props
   const {id: price_id, unit_amount: cost, product: productInfo} = product
   const { name, description } = productInfo
 
-  const Router = useRouter()
+  const setProduct = useCart(state => state.setProduct)
+
+  const router = useRouter()
 
   function onProductClick() {
-    Router.push('/product?price_id=' + price_id)
+    const newProduct = {
+      name,
+      description,
+      price_id,
+      cost,
+      productInfo
+    }
+    setProduct({ newProduct })
+    router.push('/product?price_id=' + price_id)
   }
   return (
     <div onClick={onProductClick} className='flex flex-col shadow bg-white hover:shadow-lg cursor-pointer'>

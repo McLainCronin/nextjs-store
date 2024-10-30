@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <Link href={'/'}>
            <h1 className="uppercase cursor-pointer hover:scale-110">Fruit Shop</h1>
           </Link>
-          <i class="fa-solid cursor-pointer hover:text-slate-500 fa-cart-shopping"></i>
+          <i className="fa-solid cursor-pointer hover:text-slate-500 fa-cart-shopping"></i>
         </header>
         <div className="flex-1">
           {children}
