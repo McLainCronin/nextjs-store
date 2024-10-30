@@ -24,7 +24,7 @@ export default function ProductCard(props) {
     router.push('/product?price_id=' + price_id)
   }
   return (
-    <div onClick={onProductClick} className='flex flex-col shadow bg-white hover:shadow-lg cursor-pointer'>
+    <div onClick={onProductClick} className='flex flex-col shadow bg-white hover:scale-103 hover:shadow-lg cursor-pointer'>
       <img src={productInfo.images[0]} alt={name} className='w-full h-full object-cover' />
       <div className='flex flex-col gap-2 p-4'>
         <div className='flex items-center justify-between'>

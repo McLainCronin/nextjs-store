@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
+import Header from "./Header";
 
 export const metadata = {
   title: "Fruit Shop",
@@ -17,17 +18,18 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
+
         <body className={'min-h-screen flex flex-col relative ' + inter.className}>
-        <header className="sticky top-0 p-6 bg-white border-b border-solid border-blue-900 shadow-md z-50 text-2xl sm:text-3xl md:text-4xl sm:p-8 flex item-center justify-between">
-          <Link href={'/'}>
-           <h1 className="uppercase cursor-pointer hover:scale-110">Fruit Shop</h1>
-          </Link>
-          <i className="fa-solid cursor-pointer hover:text-slate-500 fa-cart-shopping"></i>
-        </header>
+          <Header />
         <div className="flex-1">
           {children}
         </div>
-        <footer>footer</footer>
+        <footer className="flex items-center flex-wrap justify-center border-t border-solid border-slate-300 p-6 md:p-8">
+          <Link href='https://www.linkedin.com/in/mclain-cronin-963781117/' target="_blank">
+            <i className="fa-brands fa-linkedin text-slate-700 hover:text-slate-500 cursor-pointer text-2xl sm:text-3xl md:text-4xl"></i>
+          </Link>
+        </footer>
+        <div id="portal"></div>
       </body>
     </html>
   );
