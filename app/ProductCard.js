@@ -2,6 +2,7 @@
 import React from 'react'
 import {useRouter} from 'next/navigation'
 import useCart from './(store)/store'
+import Link from 'next/link'
 
 export default function ProductCard(props) {
   const { product } = props
