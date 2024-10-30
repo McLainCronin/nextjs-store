@@ -1,9 +1,10 @@
 "use client"
 import useCart from "../(store)/store"
+import { useSearchParams } from 'next/navigation'
 
 export default function ProductPage(props) {
-const { searchParams } = props
-const { price_id } = props
+const searchParams = useSearchParams()
+const  price_id = searchParams.get('price_id')
 const product = useCart(state => state.product)
 const addItemToCart = useCart(state => state.addItemToCart)
 const { cost, productInfo, name, description} = product
@@ -17,7 +18,7 @@ if (!product?.name) {
 function handleAddToCart() {
     const newItem = {
         quantity: 1,
-        price_id: price_id,
+        price_id,
         name,
         cost
     }
