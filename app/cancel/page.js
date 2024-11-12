@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function CancelPage() {
     return (
         <div>
-            <Link>Return Home</Link>
+            <Link href={'/'}>Return Home</Link>
         </div>
     )
 }
