@@ -1,4 +1,6 @@
-"use client"
+'use client'
+
+import React from 'react'
 import useCart from "../(store)/store"
 import { useSearchParams } from 'next/navigation'
 
