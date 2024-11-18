@@ -19,14 +19,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
 
-        <body className={'min-h-screen flex flex-col relative ' + inter.className}>
+        <body className={'bg-slate-900 min-h-screen flex flex-col relative ' + inter.className}>
           <Header />
         <div className="flex-1">
           {children}
         </div>
         <footer className="flex items-center flex-wrap justify-center border-t border-solid border-slate-300 p-6 md:p-8">
           <Link href='https://www.linkedin.com/in/mclain-cronin-963781117/' target="_blank">
-            <i className="fa-brands fa-linkedin text-slate-700 hover:text-slate-500 cursor-pointer text-2xl sm:text-3xl md:text-4xl"></i>
+            <i className="fa-brands fa-linkedin text-slate-600 hover:text-slate-400 cursor-pointer text-2xl sm:text-3xl md:text-4xl"></i>
           </Link>
         </footer>
         <div id="portal"></div>
